@@ -1,0 +1,347 @@
+@import url("./global.css");
+
+header {
+    margin-top: 55px;
+    background-image: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    padding: 100px 0 300px;
+    background-size: 400% 400%;
+    animation: background-animation 10s ease infinite alternate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+header .canais {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header h1 span {
+    display: block;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+header .divisoria {
+    width: 70%;
+    max-width: 700px;
+    height: 5px;
+    background-image: linear-gradient( 90deg, #5516ba, rgba(255, 0, 229, 0.5) 80% );
+}
+
+header .oferta {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+header .oferta .preco-grande {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+}
+
+header .oferta .preco-grande span {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+header .botao-animado {
+    letter-spacing: 4px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    background-image: linear-gradient( 45deg, #9b34ef 0%, #490cb0 20%, transparent 50% );
+    background-size: 250%;
+    border-radius: 50px;
+    outline: 2px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    animation: botao-animado 2.2s linear infinite;
+}
+
+header .botao-animado:hover {
+    background-position: 100%;
+    outline: 2px solid #ff00e5;
+    transform: scale(1.05);
+}
+
+header .texto-pequeno {
+    max-width: 300px;
+    text-align: center;
+}
+
+header::after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(0deg, #020228, transparent);
+}
+
+/* main */
+
+main .plano-de-fundo  {
+    background-image: url('../images/background-movies-series.png');
+    background-size: cover;
+    scroll-margin-top: 80px;
+}
+
+main .plano-de-fundo .container {
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+}
+
+main .plano-de-fundo .container h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+main .plano-de-fundo .container .container-cards {
+    margin: 40px 0;
+    display: flex;
+    gap: 80px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+main .plano-de-fundo .container .container-cards:has(.cards:nth-child(1):hover) .cards:nth-child(2) {
+    transform: rotatey(-45deg);
+}
+
+main .plano-de-fundo .container .container-cards:has(.cards:nth-child(2):hover) .cards:nth-child(1) {
+    transform: rotateY(45deg);
+}
+
+main .plano-de-fundo .container .container-cards .cards {
+    background-image: linear-gradient(0deg, transparent, #3b1e63);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 60px;
+    min-height: 600px;
+    border-radius: 8px;
+    transition: transform 1s ease-in-out;
+}
+
+main .plano-de-fundo .container .container-cards .cards .conteudo li {
+    text-align: left;
+    font-size: 1.25rem;
+    list-style: none;
+    margin-bottom: 14px;
+    padding-left: 14px;
+}
+
+main .plano-de-fundo .container .container-cards .cards .conteudo li::marker {
+    content: "+";
+    font-size: 2rem;
+}
+
+main .plano-de-fundo .container .container-cards .cards .conteudo .topo-card {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+main .plano-de-fundo .container .container-cards .cards .conteudo .topo-card .rosa {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    color: #ff00e5;
+}
+
+main .plano-de-fundo .container .container-cards .cards .conteudo .topo-card .rosa span {
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+}
+
+/* cards de programas */
+
+main .programas {
+    text-align: center;
+    margin: 100px auto;
+    max-width: 1200px;
+    padding: 24px;
+}
+
+main .programas h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+main .programas .programas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+main .programas .programas-container .programas-cards {
+    border-radius: 16px;
+    border: 2px solid transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.8s, border 1s;
+}
+
+main .programas .programas-container .programas-cards:hover {
+    transform: scale(1.05);
+    border: 2px solid #b535f6;
+}
+
+main .programas .programas-container .programas-cards img {
+    transition: opacity 2s;
+}
+
+main .programas .programas-container .programas-cards img:hover {
+    opacity: 0;
+}
+
+main .programas .programas-container .programas-cards:nth-child(1):hover {
+    background-image: url("../images/hbo-hover_0.webp");
+}
+
+main .programas .programas-container .programas-cards:nth-child(2):hover {
+    background-image: url("../images/MAX-Hover.webp");
+}
+
+main .programas .programas-container .programas-cards:nth-child(3):hover {
+    background-image: url("../images/DC-Hover.webp");
+}
+
+main .programas .programas-container .programas-cards:nth-child(4):hover {
+    background-image: url("../images/WB-Hover.webp");
+}
+
+main .programas .programas-container .programas-cards:nth-child(5):hover {
+    background-image: url("../images/CN-Hover.png");
+}
+
+main .programas .programas-container .programas-cards:nth-child(6):hover {
+    background-image: url("../images/UCL-Hover.webp");
+}
+
+main .programas .programas-container .programas-cards img {
+    width: 100%;
+}
+
+@keyframes background-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes botao-animado {
+    0% {
+        transform: rotate(0);
+    }
+    15% {
+        transform: rotate(-15deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    25%  {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(10deg);
+    }
+    35% {
+        transform: rotate(-10deg);
+    }
+    40%, 100% {
+        transform: rotate(0);
+    }
+}
+
+@media screen  and (max-width: 1200px) {
+    main .plano-de-fundo .container .container-cards {
+        gap: 40px;
+    }
+}
+
+@media screen  and (max-width: 1140px) {
+    main .plano-de-fundo .container .container-cards {
+        margin: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+    
+    main .plano-de-fundo .container .container-cards .cards {
+        padding: 40px;
+        max-width: 600px;
+        transition: transform 1s ease-in-out;
+    }
+}
+
+@media screen  and (max-width: 800px) {
+    main .programas .programas-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen  and (max-width: 480px) {
+    header {
+        margin-top: 128px;
+    }
+
+    main .plano-de-fundo  {
+        scroll-margin-top: 120px;
+    }    
+
+    main .programas .programas-container {
+        grid-template-columns: repeat(6, 100%);
+        overflow: auto hidden;
+    }
+
+    main .plano-de-fundo .container .container-cards .cards .conteudo .topo-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+
+    main .plano-de-fundo .container .container-cards .cards .conteudo .topo-card .rosa {
+        font-size: 1.5rem;
+    }
+
+    main .plano-de-fundo .container .container-cards .cards .conteudo li {
+        font-size: 1rem;
+    }
+}
+
+@media (pointer: coarse) {
+    main .programas .programas-container .programas-cards:hover {
+        transform: none;
+    }
+
+    main .plano-de-fundo .container .container-cards:has(.cards:nth-child(1):hover) .cards:nth-child(2), 
+    main .plano-de-fundo .container .container-cards:has(.cards:nth-child(2):hover) .cards:nth-child(1) {
+        transform: none;
+    }
+}

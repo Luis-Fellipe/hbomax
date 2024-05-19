@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: #020228;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav .logo {
+    max-width: 160px;
+}
+
+nav .logo img {
+    width: 100%;
+}
+
+nav .nav-botoes .botao {
+    background-color: #b535f6;
+    padding: 8px 26px;
+    border-radius: 50px;
+    transition: background 1s, color 1s;
+}
+
+nav .nav-botoes .botao:hover {
+    background-color: white;
+    color: black;
+}
+
+nav .nav-botoes a {
+    margin-right: 24px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+p {
+    font-family: "Quicksand", sans-serif;
+}
+
+.botao-gradiente {
+    background-color: transparent;
+    background-image: linear-gradient( 45deg, #9b34ef 0%, #490cb0 20%, transparent 50% );
+    background-size: 250%;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: none;
+    outline: 2px solid transparent;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 1s, outline 1s, transform 1s;
+}
+
+.botao-gradiente:hover {
+    background-position: 100%;
+    outline: 2px solid #ff00e5;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+}
+
+footer .footer-links a {
+    font-size: 0.875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #9e86ff;
+    margin: 0 14px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: #9e86ff;
+    margin: 16px 0;
+}
+
+footer .redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b535f6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff00e5;
+}
+
+@media screen  and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 32px 24px;
+        gap: 24px;
+    }
+
+    nav .logo {
+        max-width: 100px;
+    }
+
+    nav .nav-botoes .botao {
+        margin-right: 0;
+    }
+
+    footer .footer-links a {
+        display: block;
+        margin-bottom: 16px;
+    }
+}
